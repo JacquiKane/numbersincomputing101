@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <style>
+        .heading {
+            background-color: rgb(153, 0, 0);
+            color: rgb(238, 237, 235);
+            font-style: oblique;
+        }
+
+        .contentContainer {
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container contentContainer">
+        <h3 class="heading">Numbers 101&nbsp;&#8594&nbsp;
+            <br>
+            <ul style="list-style: none;">
+                <li>Decimal</li>
+                <li>Binary</li>
+                <li>Octal</li>
+                <li>Hex</li>
+            </ul>
+        </h3>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <!-- Expanding decimal-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Expanding Decimal, or Base 10
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body contentContainer">
+
+                        <div>
+                            <strong>no subscript? Assume base 10</strong>
+                            <p>
+                            <ul>
+                                <li>Each digit in a decimal number is multiplied by powers of the base, which is 10
+                                <li>The power is the place position, starting at 0 on the rightmost side
+                                <li>Multiply each digit by the base to the power of the place position</li>
+                                <li>Add the products</li>
+                                <li>This is the value of the number</li>
+                                <li>Showing the number this way is termed expanded form</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/expandeddecimal.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanding binary-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Expanding Binary, Base 2
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body contentContainer">
+
+                        <div>
+                            <strong>The base is 2</strong>
+                            To convert the number to base 10, multiply each digit by powers of the base corresponding to
+                            the
+                            place position, then add.
+                            <p>
+                            <ul>
+                                <li>Each digit in a binary number is multiplied by powers of
+                                    the base, which is 2
+                                <li>The power is the place position, starting at 0 on the
+                                    rightmost side, termed the LSB (least significant bit)
+                                <li>Multiply each digit by the base to the power of the place position</li>
+                                <li>Add the products</li>
+                                <li>This is the value of the number</li>
+                                <li>Showing the number this way is termed expanded form</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/expandedbinary.png" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Representing hexadecimal numbers-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        What are Hexadecimal Digits?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body contentContainer">
+                        <img src="images/hexchart.png" />
+
+                        <div>
+                            <strong>4 binary bits are needed to represent a hexadecimal digit</strong>
+                            <p></p>
+                            The lowest value in the chart is 0, the highest value is F.</p>
+                            Let's expand both and see how the values map to the digits in the
+                            hex chart.</p>
+                            <p>
+                                0000<sub>2</sub>&#8594; ( 0 x 2<sup>3</sup>) + ( 0 x 2<sup>2</sup>) + ( 0 x
+                                2<sup>1</sup>) + ( 0
+                                x
+                                2<sup>0</sup>)
+                                <br><br>
+                                1111<sub>2</sub>&#8594; ( 1 x 2<sup>3</sup>) + ( 1 x 2<sup>2</sup>) +
+                                ( 1 x 2<sup>1</sup>) + ( 1 x
+                                2<sup>0</sup>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------->
+            <!-- Representing Octal numbers-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        What are Octal Digits?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body contentContainer">
+                        <img src="images/octalchart.png" />
+
+                        <div>
+                            <strong>3 binary bits are needed to represent an octal digit</strong>
+                            <p></p>
+                            The lowest value in the chart is 0, the highest value is 7.</p>
+                            Let's expand both and see how the values map to the digits in the
+                            octal chart.</p>
+                            <p>
+                                000<sub>2</sub>&#8594; ( 0 x 2<sup>2</sup>) +
+                                ( 0 x 2<sup>1</sup>) + ( 0 x
+                                2<sup>0</sup>)
+                                <br><br>
+                                111<sub>2</sub>&#8594; ( 1 x 2<sup>2</sup>) +
+                                ( 1 x 2<sup>1</sup>) +
+                                ( 1 x 2<sup>0</sup>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanding Hex-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFive">
+                        Expanding Base 16, Hexadecimal
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body contentContainer">
+                        <strong>base 16, indicated by the 0x</strong>
+                        <img src="images/expandedhex.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanding Octal-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseSix">
+                        Expanding Base 8, Octal
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingSix">
+                    <div class="accordion-body contentContainer">
+                        <strong>base 8, indicated by the subscript</strong>
+                        <img src="images/expandedoctal.png" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Representing hex -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseSeven">
+                        Representing Hexadecimal Numbers
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingSeven">
+                    <div class="accordion-body">
+                        <strong>Use prefix, 0x, and Hex chart</strong>
+                        <p>
+                            Any hexadecimal number can be represented as sequences using the
+                            hexadecimal digits in
+                            the
+                            <button type="button" class="btn btn-info" id="hexchartpopup" data-bs-toggle="popover"
+                                data-bs-trigger="hover focus" title="Hex Chart" html="true">hex chart</button>,
+                            prefixed with 0x.
+                            This notation signifies a hexadecimal number.
+                        </p>
+                        <p>
+                            0xA1C can be mapped to binary stream 1010 0001 1100.
+
+                        <table>
+                            <tr>
+                                <td style="width:50px;">A&#8594;</td>
+
+                                <td>1010</td>
+
+                            </tr>
+                            <tr>
+                                <td>1&#8594;</td>
+                                <td>0001</td>
+                            </tr>
+                            <tr>
+                                <td>C&#8594;</td>
+                                <td>1100</td>
+                            </tr>
+                        </table>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Converting hex, octal to binary-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseEight">
+                        Converting Binary to Hex, Octal
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingEight">
+                    <div class="accordion-body contentContainer">
+
+                        <div>
+                            <strong>group binary digits starting from the LSB (Least Significant Bit)</strong>
+                            <ul>
+                                <li>use groups of 4 bits for hexadecimal
+                                <li>use groups of 3 bits for octal
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="images/bin2hex.png" />
+
+                        </div>
+                        <div>
+                            <img src="images/bin2octal.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-------------------------s----------------------------------->
+        <div id="hexchartcontent" style="display: none">
+            <div>
+                <img style="display: inline-block; width: 70%; height: auto;" src="images\hexchart.png" />
+            </div>
+        </div>
+        <!------------------------------------------------------------>
+
+
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script defer src="js/lib/fontawesome-all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#hexchartpopup').popover({
+            html: true,
+            content: function () {
+                return $('#hexchartcontent').html();
+            }
+        });
+    });
+</script>
+
+</html>
